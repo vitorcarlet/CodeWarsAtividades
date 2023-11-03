@@ -1,6 +1,7 @@
 public class NumerosRomanos {
 
     public static String intToRoman(int num) {
+        String.valueOf(num);
         if (num <= 0 || num >= 4000) {
             throw new IllegalArgumentException("Number must be between 1 and 3999 (both included)");
         }

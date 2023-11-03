@@ -1,14 +1,24 @@
 public class Palindrome {
-    public boolean isPalindrome(int x) {
+    public static boolean isPalindrome(int x) {
         int reversed = 0;
+        int userInput = x;
 
         while(x != 0){
+            if(x < 0){
+                return false;
+            }
             int digit = x % 10;
             x /= 10;
             reversed = reversed * 10 + digit;
         }
+        System.out.println(reversed+" "+userInput);
+        return reversed == userInput;
 
-        return reversed != x;
+    }
+
+    public static void main(String[] args) {
+    boolean result = isPalindrome(121);
+        System.out.println(result);
 
     }
 }
