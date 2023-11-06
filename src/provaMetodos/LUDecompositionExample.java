@@ -51,7 +51,13 @@ public class LUDecompositionExample {
                 sum += L[i][j] * Y[j];
             }
             Y[i] = (b[i] - sum) / L[i][i];
+            System.out.println("Resolvendo o sistema LY = B");
+            System.out.println("Y["+i+"] = (b["+i+"] - sum) / L["+i+"]["+i+"]");
+            System.out.println("Y["+i+"] = "+(b[i] - sum)+"/"+  L[i][i]);
+            System.out.println(Y[i]);
         }
+
+        System.out.println("\n\n");
 
         // Resolvendo o sistema Ux = Y
         double[] x = new double[n];
@@ -61,6 +67,10 @@ public class LUDecompositionExample {
                 sum += U[i][j] * x[j];
             }
             x[i] = (Y[i] - sum) / U[i][i];
+            System.out.println("Resolvendo o sistema Ux = Y");
+            System.out.println("x["+i+"] = (Y["+i+"] - sum) / U["+i+"]["+i+"]");
+            System.out.println("x["+i+"] = "+(Y[i] +"-"+ sum)+"/"+  U[i][i]);
+            System.out.println(x[i]);
         }
 
         // Imprime a solução

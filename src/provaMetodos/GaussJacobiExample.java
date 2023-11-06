@@ -29,13 +29,17 @@ public class GaussJacobiExample {
                     }
                 }
                 xNew[i] = (b[i] - sum) / A[i][i];
+
             }
 
             // Verificar a convergência
             double error = 0.0;
             for (int i = 0; i < n; i++) {
+                System.out.println(xNew[i] +"+"+x[i]);
                 error += Math.abs(xNew[i] - x[i]);
+
             }
+
 
             if (error < epsilon) {
                 System.out.println("Convergência alcançada após " + (k + 1) + " iterações.");

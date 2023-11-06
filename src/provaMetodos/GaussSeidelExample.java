@@ -23,10 +23,14 @@ public class GaussSeidelExample {
                 double sum = 0.0;
                 for (int j = 0; j < n; j++) {
                     if (j != i) {
+
                         sum += A[i][j] * x[j];
+
                     }
                 }
+
                 x[i] = (b[i] - sum) / A[i][i];
+
             }
 
             // Verificar a convergência
